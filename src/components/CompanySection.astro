@@ -1,0 +1,96 @@
+---
+const companyData = [
+  { label: '会社名',     value: '株式会社ピートラスト' },
+  { label: '英語名',     value: 'P-TRUST CO., LTD.' },
+  { label: '代表取締役', value: '山下 康太' },
+  { label: '設立',       value: '—' },
+  { label: '資本金',     value: '—' },
+  { label: '所在地',     value: '〒157-0077 東京都世田谷区鎌田3-18-15 ロフティー玉川' },
+  { label: 'TEL',        value: '03-6805-7608' },
+  { label: 'FAX',        value: '03-6805-7609' },
+  { label: 'MAIL',       value: 'yamashita@ptrust-web.com' },
+  { label: '事業内容',   value: '不動産売買・仲介、不動産賃貸・管理、資産運用コンサルティング' },
+  { label: '免許番号',   value: '—' },
+  { label: '加盟団体',   value: '—' },
+];
+---
+
+<section class="section section--bg" id="company">
+  <div class="container container--narrow">
+    <div style="text-align:center">
+      <span class="section-label">Company</span>
+      <h2 class="section-title">会社概要</h2>
+      <div class="divider divider--center"></div>
+    </div>
+
+    <table class="company-table">
+      <tbody>
+        {companyData.map(({ label, value }) => (
+          <tr class="company-table__row">
+            <th class="company-table__label">{label}</th>
+            <td class="company-table__value">
+              {label === 'TEL'
+                ? <a href={`tel:${value.replace(/-/g, '')}`}>{value}</a>
+                : label === 'MAIL'
+                ? <a href={`mailto:${value}`}>{value}</a>
+                : value
+              }
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style>
+  .company-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-lg);
+  }
+
+  .company-table__row {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .company-table__row:first-child {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .company-table__label {
+    font-family: var(--font-sans-ja);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text-mid);
+    letter-spacing: 0.05em;
+    padding: 1.1rem var(--space-md) 1.1rem 0;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 130px;
+  }
+
+  .company-table__value {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    padding: 1.1rem 0;
+    line-height: 1.7;
+  }
+
+  .company-table__value a {
+    color: var(--color-navy);
+    border-bottom: 1px solid var(--color-border);
+    transition: border-color var(--transition), color var(--transition);
+  }
+
+  .company-table__value a:hover {
+    color: var(--color-gold);
+    border-color: var(--color-gold);
+  }
+
+  @media (max-width: 600px) {
+    .company-table__label {
+      width: 100px;
+    }
+  }
+</style>

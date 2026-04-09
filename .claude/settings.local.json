@@ -10,7 +10,29 @@
       "Bash(gh repo:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m ':*)"
+      "Bash(git commit -m ':*)",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(netlify status:*)",
+      "Bash(netlify deploy:*)",
+      "Read(//Users/oomomotakuma/Downloads/**)",
+      "Bash(unzip -l /Users/oomomotakuma/Downloads/ロゴデータ.zip)",
+      "Bash(unzip -o /Users/oomomotakuma/Downloads/ロゴデータ.zip -d /tmp/logo-data)",
+      "Bash(python3 -c \"import cairosvg\")",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)",
+      "Bash(/Applications/Inkscape.app/Contents/MacOS/inkscape --version)",
+      "Bash(/Applications/Inkscape.app/Contents/MacOS/inkscape:*)",
+      "Bash(pdftocairo -svg \"/tmp/logo-data/ロゴデータ/AIデータ/P-TRUST\\(グレー\\).ai\" /tmp/logo-ptrust.svg)",
+      "Read(//private/tmp/**)",
+      "Bash(python3:*)",
+      "Bash(npm audit:*)",
+      "Bash(node -e \"const p = require\\('./node_modules/@astrojs/sitemap/package.json'\\); console.log\\(p.version\\)\")",
+      "Bash(node -e \"const p = require\\('./node_modules/astro/package.json'\\); console.log\\(p.version\\)\")",
+      "Bash(node:*)",
+      "Bash(git commit:*)",
+      "Bash(pkill -f \"astro dev\")"
     ]
   }
 }
