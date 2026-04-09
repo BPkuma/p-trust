@@ -116,11 +116,11 @@ import PageHeader from '@/components/PageHeader.astro';
                 required
               >
                 <option value="" disabled selected>選択してください</option>
-                <option value="purchase">不動産の購入について</option>
-                <option value="sale">不動産の売却について</option>
-                <option value="rental">賃貸・管理について</option>
-                <option value="investment">資産運用・コンサルティングについて</option>
-                <option value="other">その他</option>
+                <option value="不動産の購入について">不動産の購入について</option>
+                <option value="不動産の売却について">不動産の売却について</option>
+                <option value="賃貸・管理について">賃貸・管理について</option>
+                <option value="資産運用・コンサルティングについて">資産運用・コンサルティングについて</option>
+                <option value="その他">その他</option>
               </select>
               <svg class="form-select-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
                 <path d="M1 1L6 7L11 1" stroke="#8C96A8" stroke-width="1.5" stroke-linecap="round"/>
@@ -150,7 +150,7 @@ import PageHeader from '@/components/PageHeader.astro';
                 ご入力いただいた個人情報は、お問い合わせへの返答および弊社サービスのご案内のみに使用し、第三者への提供はいたしません。
               </p>
               <label class="form-checkbox">
-                <input type="checkbox" name="agree" required />
+                <input type="checkbox" name="個人情報の取り扱いへの同意" value="同意する" required />
                 <span class="form-checkbox__mark" aria-hidden="true"></span>
                 <span class="form-checkbox__label">
                   <a href="/privacy" target="_blank" class="form-privacy-link">プライバシーポリシー</a>に同意する <span class="form-required">必須</span>
