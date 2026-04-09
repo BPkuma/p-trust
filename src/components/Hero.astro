@@ -121,16 +121,24 @@
   @media (max-width: 1024px) {
     .hero {
       grid-template-columns: 1fr;
-    }
-
-    .hero__image {
-      display: none;
+      min-height: auto;
     }
 
     .hero__content {
       max-width: 100%;
-      padding: var(--space-xl) var(--space-md);
+      padding: var(--space-xl) var(--space-md) var(--space-md);
       margin: 0;
+    }
+
+    .hero__image {
+      min-height: 360px;
+    }
+  }
+
+  /* スマートフォンでは画像を非表示 */
+  @media (max-width: 600px) {
+    .hero__image {
+      display: none;
     }
   }
 </style>
