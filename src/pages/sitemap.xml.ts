@@ -6,7 +6,6 @@ const pages = [
   { url: '/',            changefreq: 'weekly',  priority: '1.0' },
   { url: '/properties',  changefreq: 'daily',   priority: '0.9' },
   { url: '/about',       changefreq: 'monthly', priority: '0.8' },
-  { url: '/news',        changefreq: 'weekly',  priority: '0.7' },
   { url: '/contact',     changefreq: 'monthly', priority: '0.7' },
   { url: '/guide/buy',   changefreq: 'monthly', priority: '0.6' },
   { url: '/guide/sell',  changefreq: 'monthly', priority: '0.6' },
