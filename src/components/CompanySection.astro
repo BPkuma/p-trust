@@ -15,7 +15,7 @@ const companyData = [
 ];
 ---
 
-<section class="section section--bg" id="company">
+<section class="section section--navy company-section" id="company">
   <div class="container container--narrow">
     <div style="text-align:center">
       <span class="section-label">Company</span>
@@ -44,6 +44,28 @@ const companyData = [
 </section>
 
 <style>
+  .company-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .company-section::before {
+    content: 'P-TRUST';
+    position: absolute;
+    font-family: var(--font-serif-en);
+    font-size: clamp(6rem, 20vw, 16rem);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.04);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+
   .company-table {
     width: 100%;
     border-collapse: collapse;
@@ -51,18 +73,18 @@ const companyData = [
   }
 
   .company-table__row {
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .company-table__row:first-child {
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .company-table__label {
     font-family: var(--font-sans-ja);
     font-size: 0.8rem;
     font-weight: 500;
-    color: var(--color-text-mid);
+    color: rgba(255, 255, 255, 0.5);
     letter-spacing: 0.05em;
     padding: 1.1rem var(--space-md) 1.1rem 0;
     vertical-align: top;
@@ -72,20 +94,20 @@ const companyData = [
 
   .company-table__value {
     font-size: 0.875rem;
-    color: var(--color-text);
+    color: rgba(255, 255, 255, 0.85);
     padding: 1.1rem 0;
     line-height: 1.7;
   }
 
   .company-table__value a {
-    color: var(--color-navy);
-    border-bottom: 1px solid var(--color-border);
+    color: var(--color-gold-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transition: border-color var(--transition), color var(--transition);
   }
 
   .company-table__value a:hover {
-    color: var(--color-gold);
-    border-color: var(--color-gold);
+    color: var(--color-white);
+    border-color: rgba(255, 255, 255, 0.5);
   }
 
   @media (max-width: 600px) {
